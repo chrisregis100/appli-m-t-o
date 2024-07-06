@@ -5,8 +5,196 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Appli-météo</title>
   <link rel="stylesheet" href="./output.css">
+  <style>
+body{
+  background-color: #1B262C;
+}
+    .link a{
+      text-decoration-color: rgb(53, 204, 250);
+    }
+.today{
+  height: auto;
+  min-width: 100%;
+  background: rgb(9,148,232);
+background: linear-gradient(82deg, rgba(9,148,232,0.9472163865546218) 0%, rgba(50,215,238,0.9864320728291317) 1%, rgba(17,79,97,1) 88%);
+}
+  </style>
 </head>
-<body>
-  <script src="script.js"></script>
+<body class=" text-white ">
+  <header class="text-2xl font-light">
+<nav class="flex justify-between items-center mx-10 border-b-2 border-white ">
+  <div class="flex justify-center items-center m-2">
+    <img src="./images/solei-nuage.png" alt="" class="h-14">
+    <h1 class="text-4xl font-semibold">SKYWIND</h1>
+  </div>
+  <div class="nav-link font-normal">
+    <a href="#Home">Home</a>
+    <a href="Download">Download App </a>
+    <a href="Contact">Contact us</a>
+
+  </div>
+  <button class="bg-sky-500 rounded-lg px-3 py-1 font-semibold">Sign Up</button>
+ </nav>
+<div class="flex justify-center items-center mt-1 p-2 font-light bg-sky-600  link ">
+  <a href="#Today" class="font-bold " id="slide1">Today</a>
+  <a href="#Tommorow" id="slide2">Tommorow</a>
+  <a href="#Next" id="slide3">Next 8 Days</a>
+</div>
+  </header>
+  <main class="mt-4">
+    <h1 class="text-3xl font-semibold text-center">Seeing the wheather of the whole world with <span class="text-sky-500">SKYWIND !</span></h1>
+    <section>
+      <div class="flex justify-center mt-8">
+        <input type="text" placeholder="Search your location..." class="w-[500px] h-12  px-4 text-lg font-semibold bg-white bg-opacity-25 text-white">
+        <button class="border border-white rounded-xl mx-2 p-1">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-8 text-sky-600 ">
+            <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+          </svg>
+        </button>
+        
+      </div>
+    </section>
+    <section class="flex items-center justify-center mt-4">
+      <div class="relative flex items-center flex-col">
+        <div class=" bg-opacity-25  backdrop-blur">
+          <div class=" sun-contain">
+             <span>Tehran</span>   <span>35C</span>
+
+             <p>WInd speed: 11 km</p>
+             <p>Date: 19:53</p>
+             <P>Claudy
+             </P>
+          </div>
+          <img src="./images/nuage soleil.png" alt="" class="h-60  absolute top-[0px] -right-11 ">
+        </div>
+      </div>
+      <div class="relative flex items-center flex-col">
+        <div class=" bg-opacity-25  backdrop-blur">
+          <div class=" sun-contain">
+             <span>Tehran</span>   <span>35C</span>
+
+             <p>WInd speed: 11 km</p>
+             <p>Date: 19:53</p>
+             <P>Claudy
+             </P>
+          </div>
+          <img src="./images/soleillé.png" alt="" class="h-60  absolute top-[0px] -right-11 ">
+        </div>
+      </div>
+      <div class="relative flex items-center flex-col">
+        <div class=" bg-opacity-25  backdrop-blur">
+          <div class=" sun-contain">
+             <span>Tehran</span>   <span>35C</span>
+
+             <p>WInd speed: 11 km</p>
+             <p>Date: 19:53</p>
+             <P>Claudy
+             </P>
+          </div>
+          <img src="./images/parteillemrnt ensolleillé.png" alt="" class="h-52  absolute top-[50px] -right-1 ">
+        </div>
+      </div>
+    </section>
+    <section class="mt-52  w-[800px] h-[400px] m-auto overflow-hidden">
+      <div class="caroussel flex ease-in-out">
+
+        <div class="today  m-auto rounded-xl flex flex-col justify-between p-4">
+          <div class="flex items-center px-2 py-2">
+            <h1 class="text-2xl font-semibold">Burdwan</h1>
+            <span><img src="./images/location.png" alt="location" class="h-9"></span>
+          </div>
+          <div class="flex items-center gap-6 justify-center">
+            <img src="./images/thermo.png" alt="thermomètre" class="h-12">
+            <p>27 C</p>
+            <img src="./images/nuagepetit.png" alt="nuage" class="h-14">
+          </div>
+    <p class="underline "> Aug 23, Tue</p>
+         <div class="flex text-xl font-semibold items-center gap-10 mx-auto justify-center">
+          <div>
+            <p>HUMIDITY</p>
+            <P>99%</P>
+          </div>
+          <div>
+            <p>VISIBILITY</p>
+            <P>8 km</P>
+          </div>
+          <div>
+            <p>AIR PRESSURE</p>
+            <P>1005 Pa</P>
+          </div>
+          <div>
+            <p>WIND</p>
+            <P>2mph</P>
+          </div>
+         </div>
+        </div>
+  
+        <div  class= "today m-auto rounded-xl  flex flex-col justify-between p-4">
+          <div class="flex items-center px-2 py-2">
+            <h1 class="text-2xl font-semibold">Burdwan</h1>
+            <span><img src="./images/location.png" alt="location" class="h-9"></span>
+          </div>
+          <div class="flex items-center gap-6 justify-center">
+            <img src="./images/thermo.png" alt="thermomètre" class="h-12">
+            <p>27 C</p>
+            <img src="./images/nuagepetit.png" alt="nuage" class="h-14">
+          </div>
+    <p class="underline "> Aug 23, Tue</p>
+         <div class="flex text-xl font-semibold items-center gap-10 mx-auto justify-center">
+          <div>
+            <p>HUMIDITY</p>
+            <P>99%</P>
+          </div>
+          <div>
+            <p>VISIBILITY</p>
+            <P>8 km</P>
+          </div>
+          <div>
+            <p>AIR PRESSURE</p>
+            <P>1005 Pa</P>
+          </div>
+          <div>
+            <p>WIND</p>
+            <P>2mph</P>
+          </div>
+         </div>
+        </div>
+        <div  class= "today m-auto rounded-xl  flex flex-col justify-between p-4">
+          <div class="flex items-center px-2 py-2">
+            <h1 class="text-2xl font-semibold">Burdwan</h1>
+            <span><img src="./images/location.png" alt="location" class="h-9"></span>
+          </div>
+          <div class="flex items-center gap-6 justify-center">
+            <img src="./images/thermo.png" alt="thermomètre" class="h-12">
+            <p>27 C</p>
+            <img src="./images/nuagepetit.png" alt="nuage" class="h-14">
+          </div>
+    <p class="underline "> Aug 23, Tue</p>
+         <div class="flex text-xl font-semibold items-center gap-10 mx-auto justify-center">
+          <div>
+            <p>HUMIDITY</p>
+            <P>99%</P>
+          </div>
+          <div>
+            <p>VISIBILITY</p>
+            <P>8 km</P>
+          </div>
+          <div>
+            <p>AIR PRESSURE</p>
+            <P>1005 Pa</P>
+          </div>
+          <div>
+            <p>WIND</p>
+            <P>2mph</P>
+          </div>
+         </div>
+        </div>
+      </div>
+
+    </section>
+  </main>
+  <script src="script.js">
+
+  </script>
 </body>
 </html>

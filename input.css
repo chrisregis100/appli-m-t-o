@@ -1,3 +1,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.nav-link a{
+  @apply mx-4;
+}
+
+.link a {
+  @apply mx-4  hover:font-bold focus:font-bold
+}
+.sun-contain{
+  @apply bg-white bg-opacity-15 backdrop-blur bg-clip-padding relative top-[80px] h-[300px] w-[250px] flex flex-col pt-32 px-4 pb-1 rounded-3xl mx-6 text-lg font-medium
+}
