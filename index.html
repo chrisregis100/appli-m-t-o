@@ -5,48 +5,54 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Appli-météo</title>
   <link rel="stylesheet" href="./output.css">
+
   <style>
-body{
+  body{ 
   background-color: #1B262C;
 }
     .link a{
       text-decoration-color: rgb(53, 204, 250);
     }
 .today{
-  height: auto;
-  min-width: 100%;
+ height: 400px;
+  min-width:100%;
   background: rgb(9,148,232);
 background: linear-gradient(82deg, rgba(9,148,232,0.9472163865546218) 0%, rgba(50,215,238,0.9864320728291317) 1%, rgba(17,79,97,1) 88%);
+}
+.bg-menu , .bg-button{
+  background: rgb(9,148,232);
+background: linear-gradient(82deg, rgba(9,148,232,0.9472163865546218) 0%, rgba(50,215,238,0.9864320728291317) 1%, rgba(17,79,97,1) 88%);
+
 }
   </style>
 </head>
 <body class=" text-white ">
   <header class="text-2xl font-light">
-<nav class="flex justify-between items-center mx-10 border-b-2 border-white ">
+<nav class="flex justify-between items-center mx-2  md:mx-10 ">
   <div class="flex justify-center items-center m-2">
     <img src="./images/solei-nuage.png" alt="" class="h-14">
     <h1 class="text-4xl font-semibold">SKYWIND</h1>
   </div>
-  <div class="nav-link font-normal">
+  <div class="nav-link font-normal hidden md:flex ">
     <a href="#Home">Home</a>
     <a href="Download">Download App </a>
     <a href="Contact">Contact us</a>
 
   </div>
-  <button class="bg-sky-500 rounded-lg px-3 py-1 font-semibold">Sign Up</button>
+  <button class="bg-button rounded-lg px-3 py-1 font-semibold">Sign Up</button>
  </nav>
-<div class="flex justify-center items-center mt-1 p-2 font-light bg-sky-600  link ">
+<div class="flex justify-center items-center mt-1 p-2 font-light bg-menu  link ">
   <a href="#Today" class="font-bold " id="slide1">Today</a>
   <a href="#Tommorow" id="slide2">Tommorow</a>
   <a href="#Next" id="slide3">Next 8 Days</a>
 </div>
   </header>
   <main class="mt-4">
-    <h1 class="text-3xl font-semibold text-center">Seeing the wheather of the whole world with <span class="text-sky-500">SKYWIND !</span></h1>
+    <h1 class="text-2xl md:text-3xl font-semibold text-center">Seeing the wheather of the whole world with <span class="text-sky-500">SKYWIND !</span></h1>
     <section>
-      <div class="flex justify-center mt-8">
-        <input type="text" placeholder="Search your location..." class="w-[500px] h-12  px-4 text-lg font-semibold bg-white bg-opacity-25 text-white">
-        <button class="border border-white rounded-xl mx-2 p-1">
+      <div class="flex justify-center mt-8 mb-10">
+        <input type="text" placeholder="Search your location..." class=" md:w-[500px] h-12  px-4 text-lg font-semibold bg-white bg-opacity-25 text-white searchLocation">
+        <button class="border border-white rounded-xl mx-2 p-1 button">
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-8 text-sky-600 ">
             <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
           </svg>
@@ -54,9 +60,9 @@ background: linear-gradient(82deg, rgba(9,148,232,0.9472163865546218) 0%, rgba(5
         
       </div>
     </section>
-    <section class="flex items-center justify-center mt-4">
-      <div class="relative flex items-center flex-col">
-        <div class=" bg-opacity-25  backdrop-blur">
+    <!--<section class=" div md:flex items-center justify-center md:mb-52 ">
+      <div class="relative flex items-center flex-col ">
+        <div class=" bg-opacity-25  backdrop-blur mb-20 md:mb-0" >
           <div class=" sun-contain">
              <span>Tehran</span>   <span>35C</span>
 
@@ -69,7 +75,7 @@ background: linear-gradient(82deg, rgba(9,148,232,0.9472163865546218) 0%, rgba(5
         </div>
       </div>
       <div class="relative flex items-center flex-col">
-        <div class=" bg-opacity-25  backdrop-blur">
+        <div class=" bg-opacity-25  backdrop-blur mb-20 md:mb-0">
           <div class=" sun-contain">
              <span>Tehran</span>   <span>35C</span>
 
@@ -94,11 +100,14 @@ background: linear-gradient(82deg, rgba(9,148,232,0.9472163865546218) 0%, rgba(5
           <img src="./images/parteillemrnt ensolleillé.png" alt="" class="h-52  absolute top-[50px] -right-1 ">
         </div>
       </div>
-    </section>
-    <section class="mt-52  w-[800px] h-[400px] m-auto overflow-hidden">
-      <div class="caroussel flex ease-in-out">
+    </section>  -->
+    
 
-        <div class="today  m-auto rounded-xl flex flex-col justify-between p-4">
+    <section class=" md:h-[400px] md:w-[800px] mx-10  md:m-auto overflow-hidden bg-black mb-6 relative swiper ">
+   
+       <div class="caroussel flex ease-in-out relative swiper-wrapper ">
+
+        <div class="today h-[400px] rounded-xl min-h-full flex flex-col justify-between p-4 swiper-slide">
           <div class="flex items-center px-2 py-2">
             <h1 class="text-2xl font-semibold">Burdwan</h1>
             <span><img src="./images/location.png" alt="location" class="h-9"></span>
@@ -108,8 +117,8 @@ background: linear-gradient(82deg, rgba(9,148,232,0.9472163865546218) 0%, rgba(5
             <p>27 C</p>
             <img src="./images/nuagepetit.png" alt="nuage" class="h-14">
           </div>
-    <p class="underline "> Aug 23, Tue</p>
-         <div class="flex text-xl font-semibold items-center gap-10 mx-auto justify-center">
+        <p class="underline mt-12 "> Aug 23, Tue</p>
+         <div class="flex text-sm md:text-xl font-semibold items-center gap-5 md:gap-10 mx-0 md:mx-auto justify-center">
           <div>
             <p>HUMIDITY</p>
             <P>99%</P>
@@ -129,7 +138,7 @@ background: linear-gradient(82deg, rgba(9,148,232,0.9472163865546218) 0%, rgba(5
          </div>
         </div>
   
-        <div  class= "today m-auto rounded-xl  flex flex-col justify-between p-4">
+        <div class="today h-[400px] rounded-xl min-h-full flex flex-col justify-between p-4 swiper-slide">
           <div class="flex items-center px-2 py-2">
             <h1 class="text-2xl font-semibold">Burdwan</h1>
             <span><img src="./images/location.png" alt="location" class="h-9"></span>
@@ -139,8 +148,8 @@ background: linear-gradient(82deg, rgba(9,148,232,0.9472163865546218) 0%, rgba(5
             <p>27 C</p>
             <img src="./images/nuagepetit.png" alt="nuage" class="h-14">
           </div>
-    <p class="underline "> Aug 23, Tue</p>
-         <div class="flex text-xl font-semibold items-center gap-10 mx-auto justify-center">
+        <p class="underline mt-12 "> Aug 23, Tue</p>
+         <div class="flex text-sm md:text-xl font-semibold items-center gap-5 md:gap-10 mx-0 md:mx-auto justify-center">
           <div>
             <p>HUMIDITY</p>
             <P>99%</P>
@@ -159,7 +168,7 @@ background: linear-gradient(82deg, rgba(9,148,232,0.9472163865546218) 0%, rgba(5
           </div>
          </div>
         </div>
-        <div  class= "today m-auto rounded-xl  flex flex-col justify-between p-4">
+        <div class="today h-[400px] rounded-xl min-h-full flex flex-col justify-between p-4 swiper-slide">
           <div class="flex items-center px-2 py-2">
             <h1 class="text-2xl font-semibold">Burdwan</h1>
             <span><img src="./images/location.png" alt="location" class="h-9"></span>
@@ -169,8 +178,8 @@ background: linear-gradient(82deg, rgba(9,148,232,0.9472163865546218) 0%, rgba(5
             <p>27 C</p>
             <img src="./images/nuagepetit.png" alt="nuage" class="h-14">
           </div>
-    <p class="underline "> Aug 23, Tue</p>
-         <div class="flex text-xl font-semibold items-center gap-10 mx-auto justify-center">
+        <p class="underline mt-12 "> Aug 23, Tue</p>
+         <div class="flex text-sm md:text-xl font-semibold items-center gap-5 md:gap-10 mx-0 md:mx-auto justify-center">
           <div>
             <p>HUMIDITY</p>
             <P>99%</P>
@@ -189,12 +198,35 @@ background: linear-gradient(82deg, rgba(9,148,232,0.9472163865546218) 0%, rgba(5
           </div>
          </div>
         </div>
-      </div>
 
+      </div>
+  <!--Pagination-->
+      <div class="swiper-pagination"></div>
+      <!--Ajoout des bouttons de navigation-->
+    <div class="flex top-[50%] justify-between absolute w-full">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-12  hover:text-black swiper-button-prev ">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
+    </svg>
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-12 hover:text-black swiper-button-next">
+      <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+    </svg>
+    </div>
     </section>
   </main>
-  <script src="script.js">
-
-  </script>
+  <footer class="text-xl text-center py-2 md:py-0 md:flex justify-between md:h-40 items-center px-5 md:px-10 mt-6  bg-black">
+    <div class="flex justify-center items-center m-2">
+      <img src="./images/solei-nuage.png" alt="" class="h-14">
+      <h1 class="text-4xl font-semibold">SKYWIND</h1>
+    </div>
+    <div class="flex flex-col gap-5 md:block ">
+      <a href="#telecharger" class="mx-4 hover:animate-pulse ease-in-out hover:font-bold">Download App</a>
+      <a href="#contact" class="mx-4 hover:animate-pulse ease-in-out hover:font-bold">Contact us</a>
+    </div>
+    <p>Copyright © 2024</p>
+  </footer>
+  <!-- Ajout de cdn swiper-->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <!--Cusotmisation du script -->
+  <script src="script.js"></script>
 </body>
 </html>
