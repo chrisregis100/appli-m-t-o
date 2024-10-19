@@ -1,3 +1,5 @@
+
+
 const swiper = new Swiper('.swiper', {
   // Optional parameters
   direction: 'horizontal',
@@ -22,7 +24,7 @@ const swiper = new Swiper('.swiper', {
 
 
 // gestion des apis
-const apiKey = "fd6de7ebceca1e24537b7443da7ca7bf";
+const apiKey =  "fd6de7ebceca1e24537b7443da7ca7bf";
 const randomcity = ["Cotonou",
 "Porto-Novo",
 "Abomey",
